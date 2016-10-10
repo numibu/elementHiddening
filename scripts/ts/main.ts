@@ -1,12 +1,15 @@
 'use strict';
 
-console.log('Start');
+let createProperties = {id: "123", title:'контексное меню'};
 
-let createProperties = {id: 123, title:'pfujkjdjr'};
+let menu = chrome.contextMenus.create(createProperties, ()=>{alert(menu)});
 
-let menu = chrome.contextMenus.create(createProperties, ()=>{console.log('createContextMenu')});
+//chrome.contextMenus.onClicked.addListener(function callback)
 
-console.log(chrome.runtime.lastError);
+chrome.contextMenus.onClicked.addListener((info, tab)=>{
+	alert(info);
+	alert(tab);
+});
 
-console.log('END');
+
 

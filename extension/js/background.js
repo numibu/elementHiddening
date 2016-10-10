@@ -1,13 +1,7 @@
 'use strict';
 
-console.log('Start');
-
-var createProperties = { id: 123, title: 'pfujkjdjr' };
+var createProperties = { id: "123", title: 'контексное меню' };
 
 var menu = chrome.contextMenus.create(createProperties, function () {
-  console.log('createContextMenu');
+	alert(menu);
 });
-
-console.dir(chrome.runtime.lastError);
-
-console.log('END');

@@ -1,26 +1,26 @@
 {
-	"name": "element_hiddening",
-	"author": "Alexandr Naumenko",
-	"license": "MIT",
-	"version": "1.0.0",
-	"description": "hide any html element ",
-	"main": "index.js",
-
-	"scripts": {
-		"create_js": "babel scripts/ts -d extension/js",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-
-	"babel": {
-		"presets": ["es2015"],
-		"plugins": [],
-		"minified": false,
-		"ignore": "*.asd.js"
-	},
-
-	"devDependencies": {
-		"babel-cli": "^6.16.0",
-		"babel-preset-es2015": "^6.16.0"
-	}
-
+  "name": "element_hiddening",
+  "author": "Alexandr Naumenko",
+  "license": "MIT",
+  "version": "1.0.0",
+  "description": "hide any html element ",
+  "main": "index.js",
+  "scripts": {
+    "create_js": "babel scripts/ts/main.ts -o extension/js/background.js",
+    "create_js2": "babel scripts/ts/contents.ts -o extension/js/contents.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [],
+    "minified": false,
+    "ignore": "*.asd.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "gulp": "^3.9.1"
+  }
 }
