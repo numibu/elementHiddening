@@ -1,0 +1,26 @@
+{
+    "name": "ElementHiddening",
+    "description": "Remove hold elements from a site.",
+    "manifest_version": 2,
+    //"update_url": "http://clients2.google.com/service/update2/crx",
+    "version": "0.1",
+    "icons": {
+        "128": "icon.png"
+    },
+    "permissions": [
+        "tabs", // Доступ к объекту Tabs
+        "activeTab", // Доступ к объекту ActiveTabs
+        "contextMenus"
+    ],
+    "browser_action": {
+        "default_title": "more ...", // Заголовок, который отображается при наведении
+        "default_icon": "icon.png", // Иконка для отображения
+        "default_popup": "popup.html" // страница (окно), которая будет отображаться при клике на иконку 
+    },
+    "background": {
+    "persistent": false,
+    "scripts": [
+      "scripts/background.js"
+    ]
+    },
+}
