@@ -8,7 +8,7 @@ requirejs.config({
   shim: {}
 });
 
-require(['app'], function(App) {
+require(['app'], function (App) {
   window.hideElementExtension = new App();
   window.hideElementExtension.init();
 });

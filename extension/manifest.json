@@ -9,7 +9,7 @@
     "permissions": [
         "tabs", // Доступ к объекту Tabs
         "activeTab", // Доступ к объекту ActiveTabs
-        "contextMenus"
+        "contextMenus" // Доступ на генерацию контексного меню
     ],
     "browser_action": {
         "default_title": "more ...", // Заголовок, который отображается при наведении
@@ -18,12 +18,13 @@
     },
     "background": {
         "persistent": false,
-        "scripts": [
-          "js/background.js"
-        ]
+        "page": "background.html"
+        //"scripts": [
+        //  "js/background.js"
+        //]
     },
     "content_scripts": [{
         "matches": ["http://*/*"],
-        "js": ["js/contents.js"]
+        "js": ["js/jquery.min.js","js/contents.js"]
     }]
 }
