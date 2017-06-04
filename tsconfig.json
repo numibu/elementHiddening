@@ -1,0 +1,17 @@
+{
+    "name": "chromeExtension-ElementHiddening",
+    "compilerOptions": {
+        "module": "amd", // COMPILE TYPESCRIPT WITH AMD MODULES
+        //"noResolve":true,
+        "noImplicitAny": false,
+        "target": "es2015",//es6",
+        "removeComments": true,
+        "sourceMap": true,
+        //"outFile": "contents.js", // COMPILE TYPESCRIPT INTO A SINGLE FILE WITH AMD MODULES // in gulp .pipe(rename({basename:"contents",extname:".js"}))
+        "typeRoots" : ["./typings/globals", "./node_modules/@types"],
+        "types": ["chrome", "jquery", "requirejs", "node", "react" ,"react-dom"]
+    },
+    "exclude": [ /*"node_modules", "wwwroot"*/]
+}
+// comand adding typings to lib:
+// typings install jquery --save-dev --source dt --global

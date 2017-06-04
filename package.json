@@ -7,8 +7,13 @@
   "main": "index.js",
   "private": true,
   "dependencies": {
+    "@types/react": "^15.0.9",
+    "@types/react-dom": "^0.14.23",
+    "connect": "2.7.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
     "requirejs": "latest",
-    "connect": "2.7.0"
+    "typescript": "^2.1.6"
   },
   "scripts": {
     "create_js": "babel scripts/ts/main.ts -o extension/js/main.js",
@@ -25,10 +30,20 @@
     "ignore": "*.asd.js"
   },
   "devDependencies": {
+    "@types/node": "^7.0.5",
+    "@types/react": "^15.0.9",
+    "@types/react-dom": "^0.14.23",
+    "amd-optimize": "^0.6.1",
     "babel-cli": "^6.16.0",
     "babel-preset-es2015": "^6.16.0",
-    "babel-preset-es2016": "^6.16.0",
     "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2"
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-requirejs": "^1.0.0-rc1",
+    "gulp-requirejs-optimize": "^1.2.0",
+    "merge2": "^1.0.3",
+    "rename": "^1.0.4",
+    "require-cs": "^0.5.4"
   }
 }

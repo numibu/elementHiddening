@@ -1,14 +1,9 @@
-'use strict';
-
 requirejs.config({
-  baseUrl: 'js',
-
-  paths: {},
-
-  shim: {}
+    baseUrl: "js/classes/",
+    paths: {},
+    shim: {}
 });
-
-require(['app'], function (App) {
-  window.hideElementExtension = new App();
-  window.hideElementExtension.init();
+console.log('inMain');
+require(['App'], function (App) {
+    var app = new App();
 });

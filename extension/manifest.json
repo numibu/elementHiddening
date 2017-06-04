@@ -7,7 +7,7 @@
         "128": "icon.png"
     },
     "permissions": [
-        "tabs", // Доступ к объекту Tabs
+        "tabs", //Доступ к объекту Tabs*
         "activeTab", // Доступ к объекту ActiveTabs
         "contextMenus" // Доступ на генерацию контексного меню
     ],
@@ -23,8 +23,9 @@
         //  "js/background.js"
         //]
     },
+    "web_accessible_resources": ["js/classes/*","js/lib/*"],
     "content_scripts": [{
         "matches": ["http://*/*"],
-        "js": ["js/jquery.min.js","js/contents.js"]
+        "js": [ "js/lib/jquery.min.js", "js/lib/require.js", "js/lib/require-cs.js", "js/contents.js" ]
     }]
 }
